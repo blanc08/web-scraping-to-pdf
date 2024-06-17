@@ -1,57 +1,94 @@
 # Load the jinja library's namespace into the current module.
-import jinja2
 from os import path
-
+import jinja2
 import pandas as pd
+import pdfkit
+
+from constant import CATEGORIES
+from utils import make_output_dir
 
 
-base_dir = path.join(path.curdir, "saved", "ceiling")
-asset_dir = path.join(path.curdir, "assets")
+class PDFGenerator:
+    def __init__(self, category: str):
+        self.output_path = None
 
-df = pd.read_csv(path.join(base_dir, "1.csv"))
+        make_output_dir()
 
-chunk_size = 4  # Adjust as needed
+        if category.lower() not in CATEGORIES:
+            raise FileNotFoundError("invalid category")
 
-# Create list of sub-DataFrames
-data_chunks = [
-    df for df in (df[i : i + chunk_size] for i in range(0, len(df), chunk_size))
-]
+        self.category = category
 
-# In this case, we will load templates off the filesystem.
-# This means we must construct a FileSystemLoader object.
-#
-# The search path can be used to make finding templates by
-#   relative paths much easier.  In this case, we are using
-#   absolute paths and thus set it to the filesystem root.
-templateLoader = jinja2.FileSystemLoader(searchpath="/")
+    def generate_html(self, filename: str):
+        """
+        docstring
+        """
 
-# An environment provides the data necessary to read and
-#   parse our templates.  We pass in the loader object here.
-templateEnv = jinja2.Environment(loader=templateLoader)
+        df = pd.read_csv(path.join(path.curdir, "out/csv", self.category, filename))
 
-# This constant string specifies the template file we will use.
-main_template = path.join(path.curdir, "pdf/template/index.html")
-TEMPLATE_FILE = (
-    "/Users/macbookpro/src/web-scraping/visualcomfort/pdf/template/index.html"
-)
+        chunk_size = 4  # Adjust as needed
 
-# Read the template file using the environment object.
-# This also constructs our Template object.
-template = templateEnv.get_template(TEMPLATE_FILE)
+        # Create list of sub-DataFrames
+        data_chunks = [
+            df for df in (df[i : i + chunk_size] for i in range(0, len(df), chunk_size))
+        ]
 
-# Specify any input variables to the template as a dictionary.
-templateVars = {
-    "title": "Test Example",
-    "description": "A simple inquiry of function.",
-    "data": data_chunks,
-}
+        # In this case, we will load templates off the filesystem.
+        # This means we must construct a FileSystemLoader object.
+        #
+        # The search path can be used to make finding templates by
+        #   relative paths much easier.  In this case, we are using
+        #   absolute paths and thus set it to the filesystem root.
+        templateLoader = jinja2.FileSystemLoader(searchpath="template")
 
-# Finally, process the template to produce our final text.
-outputText = template.render(templateVars)
+        # An environment provides the data necessary to read and
+        #   parse our templates.  We pass in the loader object here.
+        templateEnv = jinja2.Environment(loader=templateLoader)
 
-output_file = path.join(path.curdir, "pdf", "output", "html", "index.html")
+        # This constant string specifies the template file we will use.
+        TEMPLATE_FILE = f"{self.category.lower()}/index.html"
 
-with open(output_file, "w") as file:
-    file.write(outputText)
+        # Read the template file using the environment object.
+        # This also constructs our Template object.
+        template = templateEnv.get_template(TEMPLATE_FILE)
 
-print(outputText)
+        # Specify any input variables to the template as a dictionary.
+        templateVars = {
+            "title": "PDF Generator",
+            "description": "A simple inquiry of function.",
+            "data": data_chunks,
+        }
+
+        # Finally, process the template to produce our final text.
+        outputText = template.render(templateVars)
+
+        output_filename = filename.split(".")[0]
+        if output_filename == None:
+            output_file = "default"
+
+        output_file = path.join(
+            path.curdir, "out/html", self.category.lower(), f"{output_filename}.html"
+        )
+
+        with open(output_file, "w") as file:
+            file.write(outputText)
+
+        self.output_path = output_file
+
+    # TODO : Stylignnya masih kacau
+    def generate_pdf(self):
+        print(self.category)
+
+        # Optional: Customize with configuration options
+        options = {"encoding": "UTF-8"}
+        output_path_as_list = self.output_path.split("/")
+
+        # replace html to pdf
+        output_path_as_list[-3] = "pdf"
+        pdf_output_path = "/".join(output_path_as_list) + ".pdf"
+        pdfkit.from_file(self.output_path, pdf_output_path, options=options)
+
+
+generator = PDFGenerator(category="ceiling")
+generator.generate_html("1.csv")
+# generator.generate_pdf()
