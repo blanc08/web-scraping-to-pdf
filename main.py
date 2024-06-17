@@ -19,29 +19,40 @@ from selenium.common.exceptions import (
 # Utils
 import retrying
 
+from constant import CATEGORIES
+from utils import make_output_dir
+
 # Logger
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
 class Scraping:
-    def __init__(self, base_url: str, web_driver: webdriver.Chrome, labels: list):
-        self.base_url = base_url
+    def __init__(self, web_driver: webdriver.Chrome, category: str, labels: list):
+        # Prepare output dir in case not exist
+        make_output_dir()
+
+        if category.lower() not in CATEGORIES:
+            raise FileNotFoundError("invalid category")
+
+        self.base_url = "https://www.visualcomfort.com"
         self.driver = web_driver
         self.labels = labels
         self.items = []
+        self.category = category
+        self.csv_base_path = os.path.join(os.path.curdir, "out/csv", category)
 
         # create checkpoint
 
     # TODO: Main method
-    def parse(self, path, page=1, has_more=True):
+    def parse(self, page=1, has_more=True):
         """
         Parse an items for given path name
         """
 
         # if page == 1 or page not received, Check if there are already procesed file for current path
         if page == 1:
-            pages = os.listdir(os.path.join(os.path.curdir, "saved", path))
+            pages = os.listdir(self.csv_base_path)
 
             if len(pages) > 0:
                 pages = [
@@ -53,11 +64,14 @@ class Scraping:
                     for page in pages
                 ]
                 pages.sort(reverse=True)
-                print("pages", pages)
+
+                logger.info(f"current page {pages}")
                 page = pages[0] + 1
 
         while has_more:
-            next_pool = self.parse_page(f"{self.base_url}/{path}", params={"p": page})
+            next_pool = self.parse_page(
+                f"{self.base_url}/{self.category}", params={"p": page}
+            )
             if has_more == True:
                 has_more = next_pool
 
@@ -83,9 +97,7 @@ class Scraping:
             mapped_item = self.map_items(items)
 
             # save as file (checkpoint purpose)
-            file_name = os.path.join(
-                os.path.curdir, "saved", url.split("/")[-1], (str(params["p"]) + ".csv")
-            )
+            file_name = os.path.join(self.csv_base_path, (str(params["p"]) + ".csv"))
             self.save(mapped_item, file_name)
 
             self.items.append(mapped_item)
@@ -243,6 +255,8 @@ class Scraping:
                 max_header["length"] = length
                 max_header["index"] = index
 
+        # filepath
+
         with open(file_name, "w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             headers = items[max_header["index"]].keys()
@@ -271,11 +285,9 @@ if __name__ == "__main__":
         "Dimensional Url",
     ]
 
-    ceiling = Scraping(
-        base_url="https://www.visualcomfort.com", web_driver=web_driver, labels=labels
-    )
+    ceiling = Scraping(web_driver=web_driver, category="ceiling", labels=labels)
 
-    items = ceiling.parse("ceiling")
+    items = ceiling.parse()
 
     # debug || offs
     web_driver.quit()
