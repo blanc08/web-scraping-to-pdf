@@ -60,7 +60,7 @@ class Scraping:
             next_pool = self.parse_page(f"{self.base_url}/{path}", params={"p": page})
             if has_more == True:
                 has_more = next_pool
-                
+
             page = page + 1
 
         return self.items
@@ -205,7 +205,7 @@ class Scraping:
                                 splited_text[1:]
                             ).strip()
 
-                time.sleep(2)
+                time.sleep(4)
                 # Image
                 image = self.driver.find_elements(
                     by=By.CLASS_NAME, value="fotorama__img"
