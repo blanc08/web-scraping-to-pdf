@@ -86,7 +86,7 @@ class Scraping:
             file_name = os.path.join(
                 os.path.curdir, "saved", url.split("/")[-1], (str(params["p"]) + ".csv")
             )
-            self.explicit_save(mapped_item, file_name)
+            self.save(mapped_item, file_name)
 
             self.items.append(mapped_item)
             return True
@@ -228,7 +228,7 @@ class Scraping:
 
         return result
 
-    def explicit_save(self, items: list, file_name="result.csv"):
+    def save(self, items: list, file_name="result.csv"):
         """
         docstring
         """
