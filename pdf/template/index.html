@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Multiple Sheets</title>
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'sans': ['"Adobe Clean UX"', 'Roboto', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="http://127.0.0.1:5500/pdf/template/style.css">
+
+    <!-- Set page size here: A5, A4 or A3 -->
+    <!-- Set also "landscape" if you need -->
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+</head>
+
+<!-- Set "A5", "A4" or "A3" for class name -->
+<!-- Set also "landscape" if you need -->
+
+<body class="A4 base !text-[10pt] text-[#58595b]">
+
+    <!-- Each sheet element should have the class "sheet" -->
+    <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+
+    {% for chunk in data %}
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        {# grid container #}
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            {# loop item #}
+            {% for index, row in chunk.iterrows() %}
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='{{row["Image"]}}' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>{{row["Name"]}}</h5>
+                        <h6>SKU: {{row["Code"]}}</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: {{row["Height"]}} Width: {{row["Width"]}}</li>
+                            <li>Canopy: {{row["Canopy"]}}</li>
+                            <li>Weight: {{row["Weight"]}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+    {% endfor %}
+
+    <!-- The second sheet -->
+    <section class="sheet padding-10mm">
+
+        <!-- Write HTML just like a web page -->
+        <article>This is the second sheet.</article>
+
+    </section>
+
+</body>
+
+</html>

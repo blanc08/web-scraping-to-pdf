@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Multiple Sheets</title>
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'sans': ['"Adobe Clean UX"', 'Roboto', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Set page size here: A5, A4 or A3 -->
+    <!-- Set also "landscape" if you need -->
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+</head>
+
+<!-- Set "A5", "A4" or "A3" for class name -->
+<!-- Set also "landscape" if you need -->
+
+<body class="A4 base !text-[10pt] text-[#58595b]">
+
+    <!-- Each sheet element should have the class "sheet" -->
+    <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/j/n/jn5110gcg.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Talia Small Chandelier</h5>
+                        <h6>SKU: JN5110</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 43.18 cm Width: 60.96 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 15 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/J/N/JN5112GCG.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Talia Large Chandelier</h5>
+                        <h6>SKU: JN5112</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 60.96 cm Width: 83.82 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 37 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn5124pncg_4.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Bonnington Chandelier</h5>
+                        <h6>SKU: ARN5124</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 38.10 cm Width: 60.96 cm</li>
+                            <li>Canopy: 15.24 cm Octagon</li>
+                            <li>Weight: 45 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/k/w/kw5074g_12.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Strada Medium Oval Chandelier</h5>
+                        <h6>SKU: KW5074</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 96.52 cm</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 36 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc2164ai_8.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Darlana Small Lantern</h5>
+                        <h6>SKU: CHC2164</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 45.72 cm Width: 30.48 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 8 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/s/k/sk5355pgy_16.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Elliot Grande Pendant</h5>
+                        <h6>SKU: SK5355</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 27.94 cm Width: 76.20 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 59 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5452agl.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Piaf Grande Chandelier</h5>
+                        <h6>SKU: TOB5452</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 147.32 cm</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 15 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/s/l/sl5812bzl_1.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Classic Ring Chandelier</h5>
+                        <h6>SKU: SL5812</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 96.52 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 18 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5090anl_1.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Goodman Small Hanging Light</h5>
+                        <h6>SKU: TOB5090</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 38.10 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 8 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn4011g_13.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Hampton Mini Chandelier</h5>
+                        <h6>SKU: ARN4011</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 20.32 cm Width: 40.64 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 9 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc2165ab_18.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Darlana Medium Lantern</h5>
+                        <h6>SKU: CHC2165</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 60.96 cm Width: 43.18 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 11 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5455agl.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Piaf Large Two Light Linear Pendant</h5>
+                        <h6>SKU: TOB5455</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 157.48 cm x 30.48 cm;</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 9 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5115pnai_9.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Piatto Medium Pendant</h5>
+                        <h6>SKU: TOB5115</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 17.78 cm Width: 45.72 cm</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 7 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn4000pnwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Rosehill Semi-Flush</h5>
+                        <h6>SKU: ARN4000</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 25.40 cm Width: 40.64 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 10 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/J/N/JN4112GCG.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Talia 20" Flush Mount</h5>
+                        <h6>SKU: JN4112</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 27.94 cm Width: 48.26 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 8 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/k/s/ks4071gl.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Walker Medium Flush Mount</h5>
+                        <h6>SKU: KS4071</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 17.78 cm Width: 45.72 cm</li>
+                            <li>Canopy: 20.32 cm Round</li>
+                            <li>Weight: 6 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/s/s/ss4015anwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Siena Small Flush Mount</h5>
+                        <h6>SKU: SS4015</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 10.16 cm Width: 27.94 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 6 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn4401pnwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Cristol Large Triple Flush Mount</h5>
+                        <h6>SKU: ARN4401</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 22.86 cm Width: 38.10 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 8 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/k/s/ks4072gl.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Walker Large Flush Mount</h5>
+                        <h6>SKU: KS4072</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 17.78 cm Width: 60.96 cm</li>
+                            <li>Canopy: 20.32 cm Round</li>
+                            <li>Weight: 9 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/h/ah4015gmfg_11.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Basil 17" Flush Mount</h5>
+                        <h6>SKU: AH4015</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 12.70 cm Width: 43.18 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 11 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc2109ab_11.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Country Semi-Flush Bell Jar Lantern</h5>
+                        <h6>SKU: CHC2109</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 40.64 cm Width: 33.02 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 8 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn5011g_13.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Hampton Medium Chandelier</h5>
+                        <h6>SKU: ARN5011</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 63.50 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 13 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/h/ah4014gmfg_11.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Basil Small Flush Mount</h5>
+                        <h6>SKU: AH4014</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 12.70 cm Width: 27.94 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 6 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5451agl.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Piaf Large Chandelier</h5>
+                        <h6>SKU: TOB5451</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 99.06 cm</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 10 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5150anwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Milton Road Flush Mount</h5>
+                        <h6>SKU: TOB5150</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 35.56 cm Width: 35.56 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 13 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/3/1/3109305848_1.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Foxdale Five Light Chandelier</h5>
+                        <h6>SKU: 3109305</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 35.56 cm Width: 66.04 cm</li>
+                            <li>Canopy: D:12.70 cm H:0.00 cm; Round</li>
+                            <li>Weight: nan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/f/af1083adb_5.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Helios Large Semi-Flush Mount</h5>
+                        <h6>SKU: AF1083</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 22.86 cm Width: 43.18 cm</li>
+                            <li>Canopy: D:12.70 cm H:0.00 cm; Round</li>
+                            <li>Weight: nan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn4001pnwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Rosehill Large Semi-Flush Mount</h5>
+                        <h6>SKU: ARN4001</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 25.40 cm Width: 53.34 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 18 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5226bzg4cg_8.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Katie Globe Pendant</h5>
+                        <h6>SKU: TOB52264</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 35.56 cm Width: 30.48 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 8 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/7/5/7518848_2.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Leo - Hanging Globe One Light Wall / Ceiling Semi-Flush Mount</h5>
+                        <h6>SKU: 7518</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 22.86 cm Width: nan</li>
+                            <li>Canopy: D:12.70 cm H:2.54 cm; Round</li>
+                            <li>Weight: nan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/J/N/JN5111GCG.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Talia Medium Chandelier</h5>
+                        <h6>SKU: JN5111</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 55.88 cm Width: 73.66 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 26 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/J/N/JN4114GCG.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Talia 38" Flush Mount</h5>
+                        <h6>SKU: JN4114</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 38.10 cm Width: 93.98 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 27 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn4307gfg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Arabelle Large Flush Mount</h5>
+                        <h6>SKU: ARN4307</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 20.32 cm Width: 48.26 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 18 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc4391abwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Alderly Small Flush Mount</h5>
+                        <h6>SKU: CHC4391</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 10.16 cm Width: 33.02 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 5 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/k/s/ksf1091bbs.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Mari Medium Flush Mount</h5>
+                        <h6>SKU: KSF1091</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 15.24 cm Width: 33.02 cm</li>
+                            <li>Canopy: D:10.16 cm H:2.54 cm; Round</li>
+                            <li>Weight: nan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn5425bzpw_11.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Mollino Medium Tiered Chandelier</h5>
+                        <h6>SKU: ARN5425</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 40.64 cm Width: 63.50 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 38 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/S/K/SK4206GI.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Leslie 16" Semi-Flush</h5>
+                        <h6>SKU: SK4206</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 20.32 cm Width: 40.64 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 12 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/p/cp1021bbs_8.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Atlantic Narrow Pendant</h5>
+                        <h6>SKU: CP1021</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 45.72 cm Width: 25.40 cm</li>
+                            <li>Canopy: D:12.70 cm H:0.00 cm; Round</li>
+                            <li>Weight: nan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc2176ai_8.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Darlana Large Lantern</h5>
+                        <h6>SKU: CHC2176</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 86.36 cm Width: 60.96 cm</li>
+                            <li>Canopy: 17.78 cm Round</li>
+                            <li>Weight: 20 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/J/N/JN4110GCG.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Talia 24" Semi-Flush Mount</h5>
+                        <h6>SKU: JN4110</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 58.42 cm Width: 60.96 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 15 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc5016abnab_2.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Antigua Medium Drum Chandelier</h5>
+                        <h6>SKU: CHC5016</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 53.34 cm Width: 76.20 cm</li>
+                            <li>Canopy: 15.24 cm Round</li>
+                            <li>Weight: 26 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/A/L/AL5010BZCHCL.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Griffin Grande Linear Chandelier</h5>
+                        <h6>SKU: AL5010</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 25.40 cm x 157.48 cm;</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 7 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob4006anwg_10.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Clark Flush Mount</h5>
+                        <h6>SKU: TOB4006</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 30.48 cm Width: 17.78 cm</li>
+                            <li>Canopy: 17.78 cm Round</li>
+                            <li>Weight: 6 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/t/o/tob5008bzl_1.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Vendome Large Chandelier</h5>
+                        <h6>SKU: TOB5008</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: nan Width: 88.90 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 9 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <section class="sheet p-24 background">
+        <!-- Write HTML just like a web page -->
+        
+        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+            
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/a/r/arn5427bzpw_14.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Mollino Large Tiered Chandelier</h5>
+                        <h6>SKU: ARN5427</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 63.50 cm Width: 81.28 cm</li>
+                            <li>Canopy: 12.70 cm Round</li>
+                            <li>Weight: 55 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/c/h/chc4392abwg_11.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Alderly Flush Mount</h5>
+                        <h6>SKU: CHC4392</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 10.16 cm Width: 40.64 cm</li>
+                            <li>Canopy: nan</li>
+                            <li>Weight: 9 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/s/k/sk5008azcg_3.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Morris Small Lantern</h5>
+                        <h6>SKU: SK5008</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 53.34 cm Width: 33.02 cm</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 14 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items-center justify-center flex flex-col items-center justify-center">
+                <div class="w-52 h-52">
+                    <img class="w-full h-auto" src='https://www.visualcomfort.com/media/catalog/product/s/k/sk5009azcg_3.png?optimize=medium&fit=bounds&height=855&width=855&canvas=855:855' alt="Your image description">
+                </div>
+                <!-- desc -->
+                <div class="b-top-2 text-gray-500 uppercase mt-4 border-t-[1px] pt-2">
+                    <div class="font-semibold">
+                        <h5>Morris Medium Lantern</h5>
+                        <h6>SKU: SK5009</h6>
+                    </div>
+
+                    <div class="mt-2">
+                        <h6>DIMENSION</h6>
+                        <ul>
+                            <li>Height: 66.04 cm Width: 45.72 cm</li>
+                            <li>Canopy: 10.16 cm Round</li>
+                            <li>Weight: 23 lbs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <!-- The second sheet -->
+    <section class="sheet padding-10mm">
+
+        <!-- Write HTML just like a web page -->
+        <article>This is the second sheet.</article>
+
+    </section>
+
+</body>
+
+</html>
