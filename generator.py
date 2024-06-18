@@ -1,7 +1,6 @@
 # Load the jinja library's namespace into the current module.
 from os import path
 import os
-from random import random
 import uuid
 import jinja2
 import pandas as pd
