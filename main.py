@@ -282,6 +282,7 @@ if __name__ == "__main__":
     labels = [
         "Name",
         "Code",
+        "Dimensional Url",
         "Height",
         "Width",
         "Canopy",
@@ -289,7 +290,6 @@ if __name__ == "__main__":
         "Wattage",
         "Chain Length",
         "Weight",
-        "Dimensional Url",
     ]
 
     ceiling = Scraping(web_driver=web_driver, category="ceiling", labels=labels)
