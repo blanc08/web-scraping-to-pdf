@@ -192,12 +192,6 @@ class Scraping:
                 if code != None:
                     dictionary["Code"] = code.text.strip()
 
-                # Update || Image src from outer thumbnail
-                image = item.find("img", {"class": "product-image-photo"})
-                logger.info(f"image src {image['src']}")
-                if image != None:
-                    dictionary["Image"] = image["src"]
-
                 # Dimensions
                 # Dimension spec only available on details page
                 dimension_url = item.find("a", {"class": "view-more"})
@@ -223,15 +217,11 @@ class Scraping:
                                 splited_text[1:]
                             ).strip()
 
-
-                # # Image | Temporary off
-                # time.sleep(4)
-                # image = self.driver.find_elements(
-                #     by=By.CLASS_NAME, value="fotorama__img"
-                # )
-                # print(dictionary["Name"], len(image))
-                # if len(image) > 0:
-                #     dictionary["Image"] = image[0].get_attribute("src")
+                # Update || Image src from outer thumbnail
+                image = item.find("img", {"class": "product-image-photo"})
+                logger.info(f"image src {image['src']}")
+                if image != None:
+                    dictionary["Image"] = image["src"]
 
                 # update labels if neccecary
                 if len(self.labels) < len(dictionary.keys()):
