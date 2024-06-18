@@ -90,5 +90,7 @@ class PDFGenerator:
 
 
 generator = PDFGenerator(category="ceiling")
-generator.generate_html("1.csv")
+for i in range(50):
+    print("i", i + 1)
+    generator.generate_html(f"{i + 1}.csv")
 # generator.generate_pdf()
