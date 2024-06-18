@@ -181,5 +181,5 @@ class PDFGenerator:
         pdfkit.from_file(self.output_path, pdf_output_path, options=options)
 
 
-generator = PDFGenerator(category="ceiling")
+generator = PDFGenerator(category="table")
 generator.generate_html_batch()
