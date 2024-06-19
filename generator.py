@@ -57,7 +57,7 @@ class PDFGenerator:
         df = pd.concat(df_list, axis=0)
 
         # slice each pdf to contains 25 page, 1 page contain 4 image
-        page_size = 25 * 4  # Adjust as needed
+        page_size = 50 * 4  # Adjust as needed
 
         # Create list of sub-DataFrames
         pages = [
@@ -85,7 +85,7 @@ class PDFGenerator:
             # Finally, process the template to produce our final text.
             outputText = self.template.render(templateVars)
 
-            output_filename = "default" + str(index) + str(uuid.uuid4())
+            output_filename = str(index) + str(uuid.uuid4())
 
             output_file = path.join(
                 path.curdir,
@@ -169,8 +169,6 @@ class PDFGenerator:
 
     # TODO : Stylignnya masih kacau
     def generate_pdf(self):
-        print(self.category)
-
         # Optional: Customize with configuration options
         options = {"encoding": "UTF-8"}
         output_path_as_list = self.output_path.split("/")
@@ -180,6 +178,26 @@ class PDFGenerator:
         pdf_output_path = "/".join(output_path_as_list) + ".pdf"
         pdfkit.from_file(self.output_path, pdf_output_path, options=options)
 
+    def generate_pdf_batch(self):
+        # Optional: Customize with configuration options
+        options = {"encoding": "UTF-8"}
+        file_list = os.listdir(path.join(path.curdir, "out/html", self.category))
 
-generator = PDFGenerator(category="table")
+        # replace html to pdf
+        input_path = path.join(path.curdir, "out/html", self.category)
+        output_path = path.join(path.curdir, "out/pdf", self.category)
+
+        for file in file_list:
+            pdfkit.from_file(
+                path.join(input_path, file),
+                output_path + str(uuid.uuid4()) + ".pdf",
+                options=options,
+            )
+
+
+generator = PDFGenerator(category="outdoor")
+
 generator.generate_html_batch()
+
+# input_path = path.join(path.curdir, "out/csv", "ceiling", "1.csv")
+# generator.generate_pdf_batch()

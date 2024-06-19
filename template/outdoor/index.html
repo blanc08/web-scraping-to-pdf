@@ -24,7 +24,7 @@
         }
     </script>
 
-    <link rel="stylesheet" href="http://127.0.0.1:5500/template/style.css">
+    <link rel="stylesheet" href="http://127.0.0.1:5500/template/ceiling/style.css">
 
     <!-- Set page size here: A5, A4 or A3 -->
     <!-- Set also "landscape" if you need -->
@@ -48,7 +48,7 @@
     <section class="sheet p-24 background">
         <!-- Write HTML just like a web page -->
         {# grid container #}
-        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+        <div class="gap-y-12 grid grid-cols-2 gap-x-4 px-14 py-5 print:py-5 print:px-14 print:grid print:grid-cols-2 print:gap-4 ">
             {# loop item #}
             {% for index, row in chunk.iterrows() %}
             <div class="items-center justify-center flex flex-col items-center justify-center w-full">
@@ -65,8 +65,9 @@
                     <div class="mt-2">
                         <h6>DIMENSION</h6>
                         <ul>
-                            <li>Width: {{row["Width"]}}</li>
-                            <li>Height: {{row["Height"]}}</li>
+                            <li>Length: {{row["Length"]}}</li>
+                            <li>Width: {{row["Weight"]}}</li>
+                            <li>Heigth: {{row["Height"]}}</li>
                         </ul>
                     </div>
                 </div>

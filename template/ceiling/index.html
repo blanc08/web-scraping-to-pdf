@@ -48,11 +48,11 @@
     <section class="sheet p-24 background">
         <!-- Write HTML just like a web page -->
         {# grid container #}
-        <div class="gap-y-20 grid grid-cols-2 gap-x-4 p-14 print:p-14 print:grid print:grid-cols-2 print:gap-4 ">
+        <div class="gap-y-12 grid grid-cols-2 gap-x-4 px-14 py-5 print:py-5 print:px-14 print:grid print:grid-cols-2 print:gap-4 ">
             {# loop item #}
             {% for index, row in chunk.iterrows() %}
-            <div class="items-center justify-center flex flex-col items-center justify-center">
-                <div class="w-48 h-48">
+            <div class="items-center justify-center flex flex-col items-center justify-center w-full">
+                <div class="w-48 h-50">
                     <img class="w-full h-auto" src='{{row["Image"]}}' alt="Your image description">
                 </div>
                 <!-- desc -->

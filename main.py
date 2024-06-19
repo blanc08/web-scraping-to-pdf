@@ -274,17 +274,18 @@ if __name__ == "__main__":
         "Code",
         "Dimensional Url",
         "Height",
+        "Length",
         "Width",
-        "Canopy",
+        "Extension",
+        "Backplate",
         "Socket",
         "Wattage",
-        "Chain Length",
         "Weight",
     ]
 
-    ceiling = Scraping(web_driver=web_driver, category="ceiling", labels=labels)
+    parser = Scraping(web_driver=web_driver, category="outdoor", labels=labels)
 
-    items = ceiling.parse()
+    items = parser.parse()
 
     # debug || offs
     web_driver.quit()
