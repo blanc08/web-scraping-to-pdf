@@ -57,7 +57,7 @@ class PDFGenerator:
         df = pd.concat(df_list, axis=0)
 
         # slice each pdf to contains 25 page, 1 page contain 4 image
-        page_size = 50 * 4  # Adjust as needed
+        page_size = 75 * 4  # Adjust as needed
 
         # Create list of sub-DataFrames
         pages = [
@@ -195,9 +195,23 @@ class PDFGenerator:
             )
 
 
-generator = PDFGenerator(category="outdoor")
+# ceiling = PDFGenerator(category="ceiling")
+# ceiling.generate_html_batch()
 
-generator.generate_html_batch()
+# fans = PDFGenerator(category="fans")
+# fans.generate_html_batch()
+
+# floor = PDFGenerator(category="floor")
+# floor.generate_html_batch()
+
+# outdoor = PDFGenerator(category="outdoor")
+# outdoor.generate_html_batch()
+
+# table = PDFGenerator(category="table")
+# table.generate_html_batch()
+
+wall = PDFGenerator(category="wall")
+wall.generate_html_batch()
 
 # input_path = path.join(path.curdir, "out/csv", "ceiling", "1.csv")
 # generator.generate_pdf_batch()
